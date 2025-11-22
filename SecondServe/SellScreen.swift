@@ -39,7 +39,6 @@ struct SellScreen: View {
                 .padding(.top, 10)
             }
         }
-        .navigationTitle("Sell / Donate")
     }
 }
 
