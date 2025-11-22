@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Dashboard: View {
+struct ContentView: View {
     var body: some View {
         VStack {
             
@@ -16,6 +16,6 @@ struct Dashboard: View {
 }
 
 #Preview {
-    Dashboard()
+    ContentView()
 }
 

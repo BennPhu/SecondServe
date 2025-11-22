@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LogIn: View {
+struct SignUp: View {
     @State private var SignUpEmail: String = ""
     @State private var SignUpPassword: String = ""
     var body: some View {
@@ -83,5 +83,5 @@ struct LogIn: View {
 }
 
 #Preview {
-    LogIn()
+    SignUp()
 }
