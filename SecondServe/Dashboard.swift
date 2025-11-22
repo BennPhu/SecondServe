@@ -1,4 +1,5 @@
 import SwiftUI
+import MapKit
 
 struct Dashboard: View {
     @State private var searchFood = ""
@@ -40,7 +41,6 @@ struct Dashboard: View {
                                 .padding(.trailing, 10)
                             }
                             .frame(height: 115)
-                            
                         }
                         
                         Text("You've reached the end!")
@@ -50,12 +50,12 @@ struct Dashboard: View {
                     }
                 }
                 
-                // search bar alongside car
+                // search bar alongside cart
                 VStack {
                     Spacer()
                     
                     HStack(spacing: 12) {
-                        //search nar
+                        // search bar
                         TextField("Search", text: $searchFood)
                             .padding(.horizontal, 12)
                             .frame(height: 50)
@@ -66,8 +66,8 @@ struct Dashboard: View {
                             .foregroundColor(.white)
                             .foregroundStyle(.white.opacity(0.9))
                             .padding(.leading, 20)
-
-                        //cart on n off
+                        
+                        // cart button
                         Button(action: {
                             showCart = true
                         }) {
@@ -105,13 +105,18 @@ struct Dashboard: View {
                 Text("Home")
             }
             
-            
-            Text("Sell").tabItem {
+            // SELL TAB
+            NavigationStack {
+                SellScreen()
+            }.tabItem {
                 Image(systemName: "plus")
                 Text("Sell")
             }
             
-            Text("Profile").tabItem {
+            // PROFILE TAB
+            NavigationStack {
+                ProfileScreen()
+            }.tabItem {
                 Image(systemName: "person.fill")
                 Text("Profile")
             }
@@ -119,6 +124,7 @@ struct Dashboard: View {
     }
 }
 
+// MARK: - Card View
 struct CardView: View {
     let title: String
     let backgroundColor: AnyGradient
