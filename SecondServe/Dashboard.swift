@@ -2,20 +2,21 @@ import SwiftUI
 
 struct Dashboard: View {
     @State private var searchFood = ""
+    @State private var showCart = false     // NEW
     
     var body: some View {
         TabView {
-            // home tab
+            
+            // HOME TAB
             ZStack {
                 
-                // scrollable feed goes here
                 ScrollView {
                     VStack(spacing: 20) {
-                        // General search / banners
                         TextField("Search", text: $searchFood)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal)
                             .frame(width: 360, height: 47)
+
                         Image("PearBanner")
                             .resizable()
                             .scaledToFill()
@@ -25,16 +26,16 @@ struct Dashboard: View {
                     }
                     .padding(.top, 24)
                 }
-
-                // bottom right cart button
+                
+                // FLOATING CART BUTTON
                 VStack {
-                    Spacer()  // pushes it to very bottom
+                    Spacer()
                     
                     HStack {
-                        Spacer() // pushes it to the right
+                        Spacer()
                         
                         Button(action: {
-                            print("Open cart")
+                            showCart = true      // <-- open cart
                         }) {
                             Image(systemName: "cart.fill")
                                 .font(.system(size: 20))
@@ -49,37 +50,38 @@ struct Dashboard: View {
                     }
                 }
             }
-            // actual home icon bttn
+            .sheet(isPresented: $showCart) {
+                VStack(spacing: 20) {
+                    Text("Your Order")
+                        .font(.title)
+                        .bold()
+                    
+                    Text("Your cart is empty!")
+                        .foregroundColor(.gray)
+                    
+                    Button("Close") {
+                        showCart = false
+                    }
+                    .padding()
+                }
+                .padding()
+            }
             .tabItem {
                 Image(systemName: "house.fill")
                 Text("Home")
             }
             
             
-            // rest of the icon + their pages
-            Text("Sell")
-                .tabItem {
-                    Image(systemName: "dollarsign")
-                    Text("Sell")
-                }
+            // OTHER TABS
+            Text("Sell").tabItem {
+                Image(systemName: "plus")
+                Text("Sell")
+            }
 
-            Text("Donation")
-                .tabItem {
-                    Image(systemName: "gift")
-                    Text("Donation")
-                }
-
-            Text("Cart")
-                .tabItem {
-                    Image(systemName: "cart.fill")
-                    Text("Cart")
-                }
-
-            Text("Profile")
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
+            Text("Profile").tabItem {
+                Image(systemName: "person.fill")
+                Text("Profile")
+            }
         }
     }
 }
