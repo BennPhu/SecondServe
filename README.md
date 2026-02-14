@@ -1,9 +1,12 @@
 # SecondServe (iOS, SwiftUI)
 <img width="512" height="524" alt="SecondServeLogo" src="https://github.com/user-attachments/assets/864022d7-d956-4d81-976a-8e2be02ade31" />
 
-![Video Demo]
+[Video Demo]
 
 [![Video Demo](https://img.youtube.com/vi/EGytYoVrBpQ/0.jpg)](https://youtu.be/EGytYoVrBpQ)
+
+DevPost Link:
+[https://devpost.com/software/second-serve](url)
 
 SwiftUI app that streamlines buying and donating surplus food. Includes Firebase-backed sign up/login, a tabbed dashboard feed, seller flow, and profile management.
 
