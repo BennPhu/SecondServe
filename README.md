@@ -1,5 +1,5 @@
 # SecondServe (iOS, SwiftUI)
-https://youtu.be/EGytYoVrBpQ
+[![Video Demo](https://img.youtube.com/vi/EGytYoVrBpQ/0.jpg)](https://youtu.be/EGytYoVrBpQ)
 
 SwiftUI app that streamlines buying and donating surplus food. Includes Firebase-backed sign up/login, a tabbed dashboard feed, seller flow, and profile management.
 
