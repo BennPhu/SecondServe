@@ -62,3 +62,4 @@ SwiftUI app that streamlines buying and donating surplus food. Includes Firebase
       .scaledToFit()
       .frame(height: 160)
   ```
+Contributors: Benn, Huey, Marc , Deepak
