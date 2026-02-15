@@ -6,7 +6,7 @@
 [![Video Demo](https://img.youtube.com/vi/EGytYoVrBpQ/0.jpg)](https://youtu.be/EGytYoVrBpQ)
 
 DevPost Link:
-[https://devpost.com/software/second-serve](url)
+[DevPost](https://devpost.com/software/second-serve)
 
 SwiftUI app that streamlines buying and donating surplus food. Includes Firebase-backed sign up/login, a tabbed dashboard feed, seller flow, and profile management.
 
